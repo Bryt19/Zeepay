@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-gray-200 dark:border-gray-900;
+  }
+  html {
+    @apply dark:bg-black;
+  }
+  body {
+    @apply bg-white dark:bg-black text-gray-900 dark:text-white;
+    background-color: white;
+  }
+  .dark {
+    background-color: #000000 !important;
+  }
+  .dark body {
+    background-color: #000000 !important;
+  }
+  .dark * {
+    border-color: rgba(17, 24, 39, 1);
+  }
+}
+
+@layer utilities {
+  .animation-delay-1000 {
+    animation-delay: 1s;
+  }
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-3000 {
+    animation-delay: 3s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+  .animation-delay-5000 {
+    animation-delay: 5s;
+  }
+  .animate-in {
+    animation-fill-mode: both;
+  }
+  .fade-in-0 {
+    animation-name: fade-in;
+  }
+  .slide-in-from-bottom-4 {
+    animation-name: slide-in-from-bottom;
+  }
+  .slide-in-from-left-4 {
+    animation-name: slide-in-from-left;
+  }
+  .slide-in-from-right-4 {
+    animation-name: slide-in-from-right;
+  }
+  .slide-in-from-top-5 {
+    animation-name: slide-in-from-top;
+  }
+  .zoom-in-50 {
+    animation-name: zoom-in;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-from-bottom {
+  from {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-from-left {
+  from {
+    transform: translateX(-1rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-from-right {
+  from {
+    transform: translateX(1rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-from-top {
+  from {
+    transform: translateY(-1rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoom-in {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
