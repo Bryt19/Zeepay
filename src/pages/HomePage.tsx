@@ -25,9 +25,9 @@ export default function HomePage() {
   }, [heroImages.length])
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-black transition-all duration-500">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50 dark:bg-black transition-all duration-500">
       {/* Compact Advanced Navbar */}
-      <header className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-md border-b border-gray-200/50 dark:border-gray-700 sticky top-0 z-50 shadow-sm dark:shadow-gray-900/50 transition-all duration-300">
+      <header className="bg-white/95 dark:bg-black/95 backdrop-blur-md border-b border-gray-200/50 dark:border-gray-800 sticky top-0 z-50 shadow-sm dark:shadow-black/50 transition-all duration-300">
         <div className="container mx-auto px-6 py-3 flex justify-between items-center">
           <div className="flex items-center space-x-3">
             <img
@@ -73,7 +73,7 @@ export default function HomePage() {
 
         {/* Mobile Navigation Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-white dark:bg-black border-t border-gray-200 dark:border-gray-900 animate-in slide-in-from-top-5 duration-200">
+          <div className="md:hidden bg-white dark:bg-black border-t border-gray-200 dark:border-gray-800 animate-in slide-in-from-top-5 duration-200">
             <nav className="container mx-auto px-6 py-4 space-y-4">
               <a
                 href="#about"
@@ -106,7 +106,7 @@ export default function HomePage() {
                 <span>Main Site</span>
                 <ExternalLink className="w-3 h-3" />
               </a>
-              <div className="pt-4 border-t border-gray-200 dark:border-gray-900">
+              <div className="pt-4 border-t border-gray-200 dark:border-gray-800">
                 <button
                   onClick={() => {
                     toggleDarkMode()
@@ -179,7 +179,7 @@ export default function HomePage() {
             cards, ATMs, bank accounts, and digital tokens to International Money Transfer Operators, Payments, Subscriptions,
             International Airtime, and Refugee payments.
           </p>
-          <p className="text-lg text-gray-500 dark:text-gray-400 mb-10 max-w-3xl mx-auto animate-in slide-in-from-bottom-4 duration-700 delay-1200">
+          <p className="text-lg text-gray-500 dark:text-gray-300 mb-10 max-w-3xl mx-auto animate-in slide-in-from-bottom-4 duration-700 delay-1200">
             In an effort to improve financial inclusion and make the world a better place to live. We are a Mobile Financial Services
             Company with offices around the world including the United Kingdom, regulated by the Financial Conduct Authority (FCA #592538)
             and Bank of Ghana (BOG PSD/ZGL/20/03).
@@ -203,39 +203,39 @@ export default function HomePage() {
       </section>
 
       {/* Stats Section */}
-      <section className="container mx-auto px-4 py-16 bg-white dark:bg-gray-800 transition-all duration-500">
+      <section className="container mx-auto px-4 py-16 bg-white dark:bg-black transition-all duration-500">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto animate-in fade-in-0 duration-1000 delay-300">
-          <div className="text-center p-6 bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-gray-900 hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-300 hover:shadow-lg hover:transform hover:scale-105 group">
+          <div className="text-center p-6 bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-gray-800 hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-300 hover:shadow-lg hover:transform hover:scale-105 group">
             <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2 group-hover:animate-pulse">50+</div>
-            <div className="text-sm text-gray-600 dark:text-gray-400">Countries</div>
+            <div className="text-sm text-gray-600 dark:text-gray-300">Countries</div>
           </div>
-          <div className="text-center p-6 bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-gray-900 hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-300 hover:shadow-lg hover:transform hover:scale-105 group">
+          <div className="text-center p-6 bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-gray-800 hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-300 hover:shadow-lg hover:transform hover:scale-105 group">
             <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2 group-hover:animate-pulse">10M+</div>
-            <div className="text-sm text-gray-600 dark:text-gray-400">Transactions</div>
+            <div className="text-sm text-gray-600 dark:text-gray-300">Transactions</div>
           </div>
-          <div className="text-center p-6 bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-gray-900 hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-300 hover:shadow-lg hover:transform hover:scale-105 group">
+          <div className="text-center p-6 bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-gray-800 hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-300 hover:shadow-lg hover:transform hover:scale-105 group">
             <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2 group-hover:animate-pulse">5+</div>
-            <div className="text-sm text-gray-600 dark:text-gray-400">Offices</div>
+            <div className="text-sm text-gray-600 dark:text-gray-300">Offices</div>
           </div>
-          <div className="text-center p-6 bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-gray-900 hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-300 hover:shadow-lg hover:transform hover:scale-105 group">
+          <div className="text-center p-6 bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-gray-800 hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-300 hover:shadow-lg hover:transform hover:scale-105 group">
             <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2 group-hover:animate-pulse">100K+</div>
-            <div className="text-sm text-gray-600 dark:text-gray-400">Active Users</div>
+            <div className="text-sm text-gray-600 dark:text-gray-300">Active Users</div>
           </div>
         </div>
       </section>
 
       {/* Who We Are Section */}
-      <section id="about" className="container mx-auto px-4 py-20 bg-gray-50/50 dark:bg-gray-900/50 transition-all duration-500">
+      <section id="about" className="container mx-auto px-4 py-20 bg-gray-50/50 dark:bg-black transition-all duration-500">
         <div className="max-w-5xl mx-auto animate-in fade-in-0 duration-1000 delay-300">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 animate-in slide-in-from-bottom-4 duration-700 delay-500">
               Who Are We?
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto animate-in slide-in-from-bottom-4 duration-700 delay-700">
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto animate-in slide-in-from-bottom-4 duration-700 delay-700">
               Leading the digital financial revolution across Africa and beyond
             </p>
           </div>
-          <div className="bg-white dark:bg-black rounded-2xl shadow-xl p-8 md:p-12 border border-gray-200 dark:border-gray-900 hover:shadow-2xl transition-all duration-500 animate-in slide-in-from-bottom-4 duration-700 delay-1000">
+          <div className="bg-white dark:bg-black rounded-2xl shadow-xl p-8 md:p-12 border border-gray-200 dark:border-gray-800 hover:shadow-2xl transition-all duration-500 animate-in slide-in-from-bottom-4 duration-700 delay-1000">
             <div className="space-y-6 text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
               <p className="text-xl animate-in fade-in-0 duration-700 delay-1200">
                 Zeepay is the fastest growing fintech focusing on digital rails to connect digital assets such as mobile money
@@ -247,7 +247,7 @@ export default function HomePage() {
                 Services Company with offices around the world including the United Kingdom and regulated by the Financial Conduct
                 Authority and other regulators across Africa.
               </p>
-              <div className="pt-6 border-t border-gray-200 dark:border-gray-900 animate-in fade-in-0 duration-700 delay-1600">
+              <div className="pt-6 border-t border-gray-200 dark:border-gray-800 animate-in fade-in-0 duration-700 delay-1600">
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center animate-pulse">
                   <Award className="w-6 h-6 mr-2 text-blue-600 dark:text-blue-400" />
                   Regulatory Compliance
@@ -279,17 +279,17 @@ export default function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="container mx-auto px-4 py-20 bg-white dark:bg-gray-800 transition-all duration-500">
+      <section id="services" className="container mx-auto px-4 py-20 bg-white dark:bg-black transition-all duration-500">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             What Do We Do?
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Comprehensive financial solutions connecting digital assets across multiple platforms and networks
           </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          <div className="bg-white dark:bg-black p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all border border-gray-200 dark:border-gray-900 group">
+          <div className="bg-white dark:bg-black p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all border border-gray-200 dark:border-gray-800 group">
             <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
               <Smartphone className="w-7 h-7 text-white" />
             </div>
@@ -299,7 +299,7 @@ export default function HomePage() {
               and AirtelTigo Money in Ghana. Seamless integration for individuals and businesses.
             </p>
           </div>
-          <div className="bg-white dark:bg-black p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all border border-gray-200 dark:border-gray-900 group">
+          <div className="bg-white dark:bg-black p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all border border-gray-200 dark:border-gray-800 group">
             <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
               <Globe className="w-7 h-7 text-white" />
             </div>
@@ -309,7 +309,7 @@ export default function HomePage() {
               Fast, secure, and cost-effective cross-border payments.
             </p>
           </div>
-          <div className="bg-white dark:bg-black p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all border border-gray-200 dark:border-gray-900 group">
+          <div className="bg-white dark:bg-black p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all border border-gray-200 dark:border-gray-800 group">
             <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
               <Zap className="w-7 h-7 text-white" />
             </div>
@@ -319,7 +319,7 @@ export default function HomePage() {
               Real-time processing with instant notifications.
             </p>
           </div>
-          <div className="bg-white dark:bg-black p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all border border-gray-200 dark:border-gray-900 group">
+          <div className="bg-white dark:bg-black p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all border border-gray-200 dark:border-gray-800 group">
             <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
               <Shield className="w-7 h-7 text-white" />
             </div>
@@ -329,7 +329,7 @@ export default function HomePage() {
               Tailored products for individuals and small businesses.
             </p>
           </div>
-          <div className="bg-white dark:bg-black p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all border border-gray-200 dark:border-gray-900 group">
+          <div className="bg-white dark:bg-black p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all border border-gray-200 dark:border-gray-800 group">
             <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
               <Building2 className="w-7 h-7 text-white" />
             </div>
@@ -339,7 +339,7 @@ export default function HomePage() {
               and subscription services. One platform for all your payment needs.
             </p>
           </div>
-          <div className="bg-white dark:bg-black p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all border border-gray-200 dark:border-gray-900 group">
+          <div className="bg-white dark:bg-black p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all border border-gray-200 dark:border-gray-800 group">
             <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
               <Globe className="w-7 h-7 text-white" />
             </div>
@@ -353,7 +353,7 @@ export default function HomePage() {
       </section>
 
       {/* Mission & Vision Section */}
-      <section className="container mx-auto px-4 py-20">
+      <section className="container mx-auto px-4 py-20 bg-white dark:bg-black transition-all duration-500">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 animate-in fade-in-0 duration-1000 delay-300">
           <div className="bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl p-8 md:p-12 text-white hover:shadow-2xl transition-all duration-500 hover:transform hover:scale-105 animate-in slide-in-from-left-4 duration-700 delay-500">
             <h3 className="text-3xl font-bold mb-4 flex items-center">
@@ -365,7 +365,7 @@ export default function HomePage() {
               and enabling seamless financial transactions for everyone, everywhere.
             </p>
           </div>
-          <div className="bg-white dark:bg-black rounded-2xl p-8 md:p-12 border border-gray-200 dark:border-gray-900 hover:shadow-2xl transition-all duration-500 hover:transform hover:scale-105 animate-in slide-in-from-right-4 duration-700 delay-700">
+          <div className="bg-white dark:bg-black rounded-2xl p-8 md:p-12 border border-gray-200 dark:border-gray-800 hover:shadow-2xl transition-all duration-500 hover:transform hover:scale-105 animate-in slide-in-from-right-4 duration-700 delay-700">
             <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
               <span className="mr-2">🔭</span>
               Our Vision
@@ -379,17 +379,17 @@ export default function HomePage() {
       </section>
 
       {/* Offices Section */}
-      <section id="offices" className="container mx-auto px-4 py-20 bg-gray-50/50 dark:bg-gray-900/50 transition-all duration-500">
+      <section id="offices" className="container mx-auto px-4 py-20 bg-gray-50/50 dark:bg-black transition-all duration-500">
         <div className="text-center mb-12 animate-in fade-in-0 duration-1000 delay-300">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 animate-in slide-in-from-bottom-4 duration-700 delay-500">
             Our Offices
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 animate-in slide-in-from-bottom-4 duration-700 delay-700">
+          <p className="text-lg text-gray-600 dark:text-gray-300 animate-in slide-in-from-bottom-4 duration-700 delay-700">
             Serving customers across multiple continents
           </p>
         </div>
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto animate-in fade-in-0 duration-1000 delay-300">
-          <div className="bg-white dark:bg-black p-8 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-900 hover:shadow-2xl transition-all duration-500 hover:transform hover:scale-105 animate-in slide-in-from-left-4 duration-700 delay-500">
+          <div className="bg-white dark:bg-black p-8 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-800 hover:shadow-2xl transition-all duration-500 hover:transform hover:scale-105 animate-in slide-in-from-left-4 duration-700 delay-500">
             <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6 flex items-center">
               <Building2 className="w-6 h-6 mr-3 text-blue-600 dark:text-blue-400 animate-pulse" />
               Zeepay JV UK
@@ -406,7 +406,7 @@ export default function HomePage() {
               </p>
             </div>
           </div>
-          <div className="bg-white dark:bg-black p-8 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-900 hover:shadow-2xl transition-all duration-500 hover:transform hover:scale-105 animate-in slide-in-from-right-4 duration-700 delay-700">
+          <div className="bg-white dark:bg-black p-8 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-800 hover:shadow-2xl transition-all duration-500 hover:transform hover:scale-105 animate-in slide-in-from-right-4 duration-700 delay-700">
             <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6 flex items-center">
               <Building2 className="w-6 h-6 mr-3 text-blue-600 dark:text-blue-400 animate-pulse" />
               Zeepay Ghana

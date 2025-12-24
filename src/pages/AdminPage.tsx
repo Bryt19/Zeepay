@@ -829,13 +829,13 @@ export default function AdminPage() {
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm">
                           <div className="flex items-center space-x-2">
-                            <Link
-                              to={`/transactions/${transaction.id}`}
-                              className="text-blue-600 dark:text-blue-400 hover:text-blue-700 transition-colors inline-flex items-center space-x-1"
-                            >
-                              <Eye className="w-4 h-4" />
-                              <span>View</span>
-                            </Link>
+                          <Link
+                            to={`/transactions/${transaction.id}`}
+                            className="text-blue-600 dark:text-blue-400 hover:text-blue-700 transition-colors inline-flex items-center space-x-1"
+                          >
+                            <Eye className="w-4 h-4" />
+                            <span>View</span>
+                          </Link>
                             <button
                               onClick={() => setDeletingTransaction(transaction)}
                               className="text-red-600 dark:text-red-400 hover:text-red-700"

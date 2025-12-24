@@ -51,11 +51,11 @@ export default function LoginPage() {
           
           if (userData?.role === 'admin') {
             navigate('/admin', { replace: true })
-          } else {
+    } else {
             navigate('/dashboard', { replace: true })
           }
-        }
-        setLoading(false)
+    }
+    setLoading(false)
       }, 100)
     }
   }
