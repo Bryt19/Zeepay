@@ -47,7 +47,7 @@ npm install
    ```
    - Edit `.env` and add your Supabase credentials:
    ```env
-   VITE_SUPABASE_URL=https://ywqzaokxnegigkbcsvmr.supabase.co
+   VITE_SUPABASE_URL=your_supabase_project_url
    VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
    ```
    - **Important**: Never commit the `.env` file to version control. It's already in `.gitignore`.
