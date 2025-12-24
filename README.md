@@ -54,98 +54,6 @@ npm install
 
 ## Database Schema
 
-You need to create the following tables in your Supabase project:
-
-### Users Table
-```sql
-CREATE TABLE users (
-  id UUID PRIMARY KEY REFERENCES auth.users(id),
-  email TEXT NOT NULL,
-  full_name TEXT,
-  role TEXT DEFAULT 'user' CHECK (role IN ('admin', 'user')),
-  is_active BOOLEAN DEFAULT true,
-  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
-);
-```
-
-### Transactions Table
-```sql
-CREATE TABLE transactions (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  reference_id TEXT UNIQUE NOT NULL,
-  sender_name TEXT NOT NULL,
-  sender_phone TEXT NOT NULL,
-  receiver_name TEXT NOT NULL,
-  receiver_phone TEXT NOT NULL,
-  amount DECIMAL(10, 2) NOT NULL,
-  status TEXT NOT NULL CHECK (status IN ('completed', 'pending', 'failed')),
-  channel TEXT NOT NULL,
-  notes TEXT,
-  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
-  updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
-);
-```
-
-### Transaction Logs Table
-```sql
-CREATE TABLE transaction_logs (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  transaction_id UUID REFERENCES transactions(id) ON DELETE CASCADE,
-  action TEXT NOT NULL,
-  details TEXT,
-  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
-  created_by TEXT NOT NULL
-);
-```
-
-### Row Level Security (RLS) Policies
-
-Enable RLS and create policies:
-
-```sql
--- Enable RLS
-ALTER TABLE users ENABLE ROW LEVEL SECURITY;
-ALTER TABLE transactions ENABLE ROW LEVEL SECURITY;
-ALTER TABLE transaction_logs ENABLE ROW LEVEL SECURITY;
-
--- Users policies
-CREATE POLICY "Users can view their own profile"
-  ON users FOR SELECT
-  USING (auth.uid() = id);
-
-CREATE POLICY "Users can update their own profile"
-  ON users FOR UPDATE
-  USING (auth.uid() = id);
-
-CREATE POLICY "Admins can view all users"
-  ON users FOR SELECT
-  USING (
-    EXISTS (
-      SELECT 1 FROM users
-      WHERE id = auth.uid() AND role = 'admin'
-    )
-  );
-
--- Transactions policies
-CREATE POLICY "All authenticated users can view transactions"
-  ON transactions FOR SELECT
-  USING (auth.role() = 'authenticated');
-
-CREATE POLICY "Admins can insert transactions"
-  ON transactions FOR INSERT
-  WITH CHECK (
-    EXISTS (
-      SELECT 1 FROM users
-      WHERE id = auth.uid() AND role = 'admin'
-    )
-  );
-
--- Transaction logs policies
-CREATE POLICY "All authenticated users can view logs"
-  ON transaction_logs FOR SELECT
-  USING (auth.role() = 'authenticated');
-```
-
 ## Running the Project
 
 ### Development Mode
@@ -275,4 +183,4 @@ Supabase credentials are now stored in environment variables for security. The a
 
 ## License
 
-Copyright © 2024 Zeepay Ghana Ltd. All rights reserved.
+Copyright © 2025 Zeepay Ghana Ltd. All rights reserved.
