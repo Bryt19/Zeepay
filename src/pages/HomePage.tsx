@@ -27,8 +27,8 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50 dark:bg-black transition-all duration-500">
       {/* Compact Advanced Navbar */}
-      <header className="bg-white/95 dark:bg-black/95 backdrop-blur-md border-b border-gray-200/50 dark:border-gray-800 sticky top-0 z-50 shadow-sm dark:shadow-black/50 transition-all duration-300">
-        <div className="container mx-auto px-6 py-3 flex justify-between items-center">
+      <header className="bg-white/95 dark:bg-black/95 backdrop-blur-md border-b border-gray-200/50 dark:border-gray-800 sticky top-0 z-50 shadow-sm dark:shadow-black/50 transition-all duration-300 w-full">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
           <div className="flex items-center space-x-3">
             <img
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUf1_tOcL7tsqxoA7CKzroOtYbcbMxrkI6dg&s"
@@ -73,8 +73,8 @@ export default function HomePage() {
 
         {/* Mobile Navigation Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-white dark:bg-black border-t border-gray-200 dark:border-gray-800 animate-in slide-in-from-top-5 duration-200">
-            <nav className="container mx-auto px-6 py-4 space-y-4">
+          <div className="md:hidden bg-white dark:bg-black border-t border-gray-200 dark:border-gray-800 animate-in slide-in-from-top-5 duration-200 w-full">
+            <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 space-y-4">
               <a
                 href="#about"
                 onClick={() => setMobileMenuOpen(false)}
@@ -124,11 +124,11 @@ export default function HomePage() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative container mx-auto px-4 py-16 md:py-24 text-center overflow-hidden">
+      <section className="relative w-full py-16 md:py-24 text-center overflow-hidden">
         {/* Dark mode overlay */}
-        <div className="absolute inset-0 bg-black/0 dark:bg-black/20 transition-all duration-500"></div>
+        <div className="absolute inset-0 bg-black/0 dark:bg-black/10 transition-all duration-500"></div>
         {/* Image Carousel */}
-        <div className="absolute inset-0 opacity-20 dark:opacity-5 pointer-events-none transition-opacity duration-500">
+        <div className="absolute inset-0 opacity-20 dark:opacity-15 pointer-events-none transition-opacity duration-500">
           <div className="relative w-full h-full">
             {heroImages.map((image, index) => (
               <div
@@ -164,22 +164,22 @@ export default function HomePage() {
           ))}
         </div>
 
-        <div className="relative max-w-5xl mx-auto animate-in fade-in-0 duration-1000 z-10 transition-all duration-500">
-          <div className="inline-flex items-center space-x-2 px-4 py-2 bg-blue-100 dark:bg-blue-900/30 rounded-full text-blue-700 dark:text-blue-300 text-sm font-medium mb-6 animate-in slide-in-from-bottom-4 duration-700 delay-300">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-in fade-in-0 duration-1000 z-10 transition-all duration-500">
+          <div className="inline-flex items-center space-x-2 px-4 py-2 bg-blue-100 dark:bg-blue-900/30 rounded-full text-blue-800 dark:text-blue-300 text-sm font-medium mb-6 animate-in slide-in-from-bottom-4 duration-700 delay-300">
             <TrendingUp className="w-4 h-4 animate-pulse" />
             <span>Fastest Growing Fintech in Africa</span>
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6 leading-tight animate-in slide-in-from-bottom-4 duration-700 delay-500">
+          <h1 className="text-5xl md:text-7xl font-bold text-black dark:text-white mb-6 leading-tight animate-in slide-in-from-bottom-4 duration-700 delay-500">
             Connecting Digital Assets
             <br />
             <span className="text-blue-600 dark:text-blue-400 animate-in slide-in-from-bottom-4 duration-700 delay-700">Across the Globe</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-6 max-w-4xl mx-auto leading-relaxed animate-in slide-in-from-bottom-4 duration-700 delay-1000">
+          <p className="text-xl md:text-2xl text-gray-800 dark:text-black mb-6 max-w-4xl mx-auto leading-relaxed animate-in slide-in-from-bottom-4 duration-700 delay-1000">
             Zeepay is the fastest growing fintech focusing on digital rails to connect digital assets such as mobile money wallets,
             cards, ATMs, bank accounts, and digital tokens to International Money Transfer Operators, Payments, Subscriptions,
             International Airtime, and Refugee payments.
           </p>
-          <p className="text-lg text-gray-500 dark:text-gray-300 mb-10 max-w-3xl mx-auto animate-in slide-in-from-bottom-4 duration-700 delay-1200">
+          <p className="text-lg text-gray-700 dark:text-black mb-10 max-w-3xl mx-auto animate-in slide-in-from-bottom-4 duration-700 delay-1200">
             In an effort to improve financial inclusion and make the world a better place to live. We are a Mobile Financial Services
             Company with offices around the world including the United Kingdom, regulated by the Financial Conduct Authority (FCA #592538)
             and Bank of Ghana (BOG PSD/ZGL/20/03).
@@ -203,8 +203,9 @@ export default function HomePage() {
       </section>
 
       {/* Stats Section */}
-      <section className="container mx-auto px-4 py-16 bg-white dark:bg-black transition-all duration-500">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto animate-in fade-in-0 duration-1000 delay-300">
+      <section className="w-full py-16 bg-white dark:bg-black transition-all duration-500">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto animate-in fade-in-0 duration-1000 delay-300">
           <div className="text-center p-6 bg-white dark:bg-black rounded-xl border border-gray-200 dark:border-gray-800 hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-300 hover:shadow-lg hover:transform hover:scale-105 group">
             <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2 group-hover:animate-pulse">50+</div>
             <div className="text-sm text-gray-600 dark:text-gray-300">Countries</div>
@@ -222,11 +223,13 @@ export default function HomePage() {
             <div className="text-sm text-gray-600 dark:text-gray-300">Active Users</div>
           </div>
         </div>
+        </div>
       </section>
 
       {/* Who We Are Section */}
-      <section id="about" className="container mx-auto px-4 py-20 bg-gray-50/50 dark:bg-black transition-all duration-500">
-        <div className="max-w-5xl mx-auto animate-in fade-in-0 duration-1000 delay-300">
+      <section id="about" className="w-full py-20 bg-gray-50/50 dark:bg-black transition-all duration-500">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto animate-in fade-in-0 duration-1000 delay-300">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 animate-in slide-in-from-bottom-4 duration-700 delay-500">
               Who Are We?
@@ -276,11 +279,13 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+        </div>
       </section>
 
       {/* Services Section */}
-      <section id="services" className="container mx-auto px-4 py-20 bg-white dark:bg-black transition-all duration-500">
-        <div className="text-center mb-16">
+      <section id="services" className="w-full py-20 bg-white dark:bg-black transition-all duration-500">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             What Do We Do?
           </h2>
@@ -350,11 +355,13 @@ export default function HomePage() {
             </p>
           </div>
         </div>
+        </div>
       </section>
 
       {/* Mission & Vision Section */}
-      <section className="container mx-auto px-4 py-20 bg-white dark:bg-black transition-all duration-500">
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 animate-in fade-in-0 duration-1000 delay-300">
+      <section className="w-full py-20 bg-white dark:bg-black transition-all duration-500">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 animate-in fade-in-0 duration-1000 delay-300">
           <div className="bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl p-8 md:p-12 text-white hover:shadow-2xl transition-all duration-500 hover:transform hover:scale-105 animate-in slide-in-from-left-4 duration-700 delay-500">
             <h3 className="text-3xl font-bold mb-4 flex items-center">
               <span className="mr-2">🎯</span>
@@ -376,11 +383,13 @@ export default function HomePage() {
             </p>
           </div>
         </div>
+        </div>
       </section>
 
       {/* Offices Section */}
-      <section id="offices" className="container mx-auto px-4 py-20 bg-gray-50/50 dark:bg-black transition-all duration-500">
-        <div className="text-center mb-12 animate-in fade-in-0 duration-1000 delay-300">
+      <section id="offices" className="w-full py-20 bg-gray-50/50 dark:bg-black transition-all duration-500">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 animate-in fade-in-0 duration-1000 delay-300">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 animate-in slide-in-from-bottom-4 duration-700 delay-500">
             Our Offices
           </h2>
@@ -423,11 +432,12 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+        </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 dark:bg-black border-t border-gray-800 text-white py-16">
-        <div className="container mx-auto px-4">
+      <footer className="bg-gray-900 dark:bg-black border-t border-gray-800 text-white py-16 w-full">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8 mb-12">
             <div>
               <div className="flex items-center space-x-2 mb-4">
@@ -493,7 +503,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="border-t border-gray-800 pt-8 text-center">
-            <p className="text-gray-400 mb-2">&copy; 2025 Zeepay. All rights reserved.</p>
+            <p className="text-gray-400 mb-2">&copy; 2026 Zeepay. All rights reserved.</p>
             <p className="text-sm text-gray-500">
               Zeepay is regulated by <strong className="text-gray-400">FCA - #592538</strong> and <strong className="text-gray-400">BOG - PSD/ZGL/20/03</strong>
             </p>
